@@ -44,7 +44,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
-    publicPath: '/content/sdgsummit/'
+    publicPath: '/content/samoa/'
   },
   module: {
     rules: [
@@ -72,7 +72,7 @@ module.exports = {
               // you can specify a publicPath here
               // by default it use publicPath in webpackOptions.output
               publicPath: '../',
-              publicPath: '/content/sdgsummit/'
+              publicPath: '/content/samoa/'
             }
           },
           {
@@ -100,7 +100,7 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: 'images/',
-            publicPath: '/content/sdgsummit/images/'
+            publicPath: '/content/samoa/images/'
           }
         }]
       },
