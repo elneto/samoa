@@ -1,8 +1,6 @@
 import 'bootstrap';
 import './style.scss';
-
 var sdgkplogo = document.getElementById('sdgsummitLogo');
-
 var $ = require('jquery');
 
 function headerSmall () {
@@ -24,7 +22,6 @@ function resizeHeader () {
 		headerNormal();
 	}
 }
-
 $(document).ready(function () {
 	resizeHeader();
 	var url = window.location.href.toString();
@@ -32,17 +29,13 @@ $(document).ready(function () {
 		$('#' + url.split('#')[1] + '-tab').tab('show');
 	}
 });
-
 $(document).scroll(function () {
 	resizeHeader();
 });
-
 $(window).resize(function () {
 	resizeHeader();
 });
-
-var menuItems = ['home', 'prep'];
-
+var menuItems = ['home', 'documentation', 'prep'];
 menuItems.forEach(function (item) {
 	$('a[href="#' + item + '"]').on('click', function (e) {
 		e.preventDefault();
