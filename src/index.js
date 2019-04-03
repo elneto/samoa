@@ -2,16 +2,19 @@ import 'bootstrap';
 import './style.scss';
 var sdgkplogo = document.getElementById('sdgsummitLogo');
 var $ = require('jquery');
+
 function headerSmall () {
 	sdgkplogo.className = 'sdgkplogo_small';
 	$('button.navbar-toggler').addClass('mt-3').removeClass('mt-5');
 	$('form#search-form').addClass('mt-3').removeClass('mt-5');
 };
+
 function headerNormal () {
 	sdgkplogo.className = 'sdgkplogo_normal';
 	$('button.navbar-toggler').addClass('mt-5').removeClass('mt-3');
 	$('form#search-form').addClass('mt-5').removeClass('mt-3');
 };
+
 function resizeHeader () {
 	if ($('body').scrollTop() > 35 || $(window).width() < 576) {
 		headerSmall();
@@ -32,7 +35,7 @@ $(document).scroll(function () {
 $(window).resize(function () {
 	resizeHeader();
 });
-var menuItems = ['home', 'documentation', 'prep'];
+var menuItems = ['home', 'about', 'programme', 'outcomes', 'documentation', 'registration', 'media', 'prep'];
 menuItems.forEach(function (item) {
 	$('a[href="#' + item + '"]').on('click', function (e) {
 		e.preventDefault();
